@@ -41,3 +41,10 @@ gotham = Serie("Gotham city", 2012, 10)
 gotham.dar_likes()
 gotham.dar_likes()
 print(f'Nome: {gotham.nome}, Ano: {gotham.ano}, Duração: {gotham.temporada}, Likes: {gotham.likes}')
+
+filmes_e_series = [vingadores, gotham]
+
+
+for programa in filmes_e_series:
+    detalhes = programa.duracao if hasattr(programa, 'duracao') else programa.temporada
+    print(f'{programa.nome} - {detalhes} D - {programa.likes}')
