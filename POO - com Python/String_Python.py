@@ -1,3 +1,4 @@
+#https://docs.python.org/pt-br/3/howto/regex.html#regex-howto
 import re
 
 
