@@ -1,9 +1,8 @@
 # url = "bytebank.com/cambio?quantidade=100&moedaOrigem=real&moedaDestino=dolar"
-url = "      a "
+url = "           "
 
 # Sanitização da URL
-#url = url.lstrip()
-url = url.rstrip()
+url = url.strip()
 
 
 # Validação da URL
