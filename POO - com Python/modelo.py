@@ -43,6 +43,9 @@ class Playlist:
     def __init__(self, nome, programas):
         self.nome = nome
         self._programas = programas
+
+    def __getitem__(self, item):
+        return self._programas [item]
     @property
     def listagem(self):
         return self._programas
@@ -77,5 +80,5 @@ atlanta.dar_likes()
 filmes_e_series = [vingadores, atlanta, demolidor, tmep, gotham]
 playlist_fim_de_semana = Playlist('fim de semana', filmes_e_series)
 
-for programa in playlist_fim_de_semana.listagem:
+for programa in playlist_fim_de_semana:
     print(programa)
