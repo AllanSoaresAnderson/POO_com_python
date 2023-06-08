@@ -45,9 +45,20 @@ class ExtratorURL:
     def __len__(self):
         return len(self.url)
 
+    def __eq__(self, other):
+        return self.url == other.url
+
 url = "bytebank.com/cambio?quantidade=100&moedaOrigem=real&moedaDestino=dolar"
 extrator_url = ExtratorURL(url)
-print(f'Tamanho: {len(extrator_url)}')
-valor_quantidade = extrator_url.get_valor_parametro("quantidade")
-print(valor_quantidade)
+extrator_url2 = ExtratorURL(url)
+
+print("Os dois objetos são iguais? ", (extrator_url == extrator_url2))
+
+#Função id() - identidade - endereço na memória
+print(id(extrator_url))
+print(id(extrator_url2))
+
+# print(f'Tamanho: {len(extrator_url)}')
+# valor_quantidade = extrator_url.get_valor_parametro("quantidade")
+# print(valor_quantidade)
 
