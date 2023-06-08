@@ -57,6 +57,9 @@ print("Os dois objetos são iguais? ", (extrator_url == extrator_url2))
 #Função id() - identidade - endereço na memória
 print(id(extrator_url))
 print(id(extrator_url2))
+result = extrator_url is extrator_url2
+
+print("Os objetos são identicos? ", result)
 
 # print(f'Tamanho: {len(extrator_url)}')
 # valor_quantidade = extrator_url.get_valor_parametro("quantidade")
